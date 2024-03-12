@@ -1,0 +1,17 @@
+altgraph==0.17.4
+macholib==1.16.3
+packaging==23.2
+pyarmor==8.5.0
+pyarmor.cli.core==6.5.0
+pyinstaller @ git+https://github.com/pyinstaller/pyinstaller.git@c335cb52972848cc1a2328cf4acf8049de9edc78
+pyinstaller-hooks-contrib==2024.2
+PyQt5==5.15.10
+PyQt5-Qt5==5.15.12
+PyQt5-sip==12.13.0
+PyQt6==6.6.1
+PyQt6-Qt6==6.6.2
+PyQt6-sip==13.6.0
+PyQt6-WebEngine==6.6.0
+PyQt6-WebEngine-Qt6==6.6.2
+PyQtWebEngine==5.15.6
+PyQtWebEngine-Qt5==5.15.12
