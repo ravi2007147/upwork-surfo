@@ -51,10 +51,12 @@ class CustomWebEnginePage(QWebEnginePage):
             if  "/ab/proposals/job/" in current_path:
                 return True
             else:
-                if  "/nx/search/jobs/" in current_path:
+                if  "/ab/proposals/" in current_path:
+                    return True
+                elif  "/nx/search/jobs/" in current_path:
                     return True
                 elif  "/ab/messages/rooms/" in current_path:
-                    return True
+                    return False
                 else:
                     return False
                 
@@ -83,7 +85,7 @@ class CustomWebEnginePage(QWebEnginePage):
 
                                     if(date){
                                         var givenDate = new Date(date);
-                                        var targetDate = new Date("2024-03-12");
+                                        var targetDate = new Date("2024-03-17");
 
                                         if (givenDate < targetDate) {
                                             list.remove()
@@ -135,7 +137,7 @@ class HtmlView(QWebEngineView):
         if windowType == QWebEnginePage.WebWindowType.WebBrowserTab:
             webView = HtmlView(self.tab)
             webView.setPage(CustomWebEnginePage(self.tab));
-            ix = self.tab.addTab(webView, "loading ...")
+            ix = self.tab.addTab(webView, "Upwork")
             self.tab.tabCloseRequested.connect(self.closeClicked)
             self.tab.setTabsClosable(True)
             self.tabs.append(ix)
@@ -156,7 +158,7 @@ class TabWidget(QTabWidget):
         
         view.load(url)
         
-        ix = self.addTab(view, "loading ...")
+        ix = self.addTab(view, "Upwork")
 
 def find_qtwebengineprocess():
     # Try to find QtWebEngineProcess using the find command
@@ -197,9 +199,9 @@ def set_qtwebengineprocess_locale():
 
 if __name__ == "__main__":
     # Set QTWEBENGINEPROCESS_PATH
-    set_qtwebengineprocess_path()
-    set_qtwebengineprocess_resource()
-    set_qtwebengineprocess_locale()
+    # set_qtwebengineprocess_path()
+    # set_qtwebengineprocess_resource()
+    # set_qtwebengineprocess_locale()
 
     app = QApplication(sys.argv)
     main = TabWidget()
