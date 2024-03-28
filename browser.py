@@ -174,7 +174,7 @@ def find_qtwebengineprocess():
 
 def set_qtwebengineprocess_path():
     # Find the path to QtWebEngineProcess
-    qtwebengineprocess_path = "/System/Volumes/Data/Users/smayra/browser/myenv/lib/python3.11/site-packages/PyQt6/Qt6/lib/QtWebEngineCore.framework/Helpers/QtWebEngineProcess.app/Contents/MacOS/QtWebEngineProcess"
+    qtwebengineprocess_path = "/System/Volumes/Data/Users/ravi/browser/myenv/lib/python3.11/site-packages/PyQt6/Qt6/lib/QtWebEngineCore.framework/Helpers/QtWebEngineProcess.app/Contents/MacOS/QtWebEngineProcess"
 
     # Set the QTWEBENGINEPROCESS_PATH environment variable
     os.environ['QTWEBENGINEPROCESS_PATH'] = qtwebengineprocess_path
@@ -182,7 +182,7 @@ def set_qtwebengineprocess_path():
 
 def set_qtwebengineprocess_resource():
     # Find the path to QtWebEngineProcess
-    qtwebengineprocess_path = "/System/Volumes/Data/Users/smayra/browser/myenv/lib/python3.11/site-packages/PyQt6/Qt6/lib/QtWebEngineCore.framework/Resources"
+    qtwebengineprocess_path = "/System/Volumes/Data/Users/ravi/browser/myenv/lib/python3.11/site-packages/PyQt6/Qt6/lib/QtWebEngineCore.framework/Resources"
 
     # Set the QTWEBENGINEPROCESS_PATH environment variable
     os.environ['QTWEBENGINE_RESOURCES_PATH'] = qtwebengineprocess_path
@@ -190,7 +190,7 @@ def set_qtwebengineprocess_resource():
 
 def set_qtwebengineprocess_locale():
     # Find the path to QtWebEngineProcess
-    qtwebengineprocess_path = "/System/Volumes/Data/Users/smayra/browser/myenv/lib/python3.11/site-packages/PyQt6/Qt6/lib/QtWebEngineCore.framework/Resources/qtwebengine_locales"
+    qtwebengineprocess_path = "/System/Volumes/Data/Users/ravi/browser/myenv/lib/python3.11/site-packages/PyQt6/Qt6/lib/QtWebEngineCore.framework/Resources/qtwebengine_locales"
 
     # Set the QTWEBENGINEPROCESS_PATH environment variable
     os.environ['QTWEBENGINE_LOCALES_PATH'] = qtwebengineprocess_path
@@ -198,11 +198,6 @@ def set_qtwebengineprocess_locale():
         
 
 if __name__ == "__main__":
-    # Set QTWEBENGINEPROCESS_PATH
-    # set_qtwebengineprocess_path()
-    # set_qtwebengineprocess_resource()
-    # set_qtwebengineprocess_locale()
-
     app = QApplication(sys.argv)
     main = TabWidget()
     main.show()
